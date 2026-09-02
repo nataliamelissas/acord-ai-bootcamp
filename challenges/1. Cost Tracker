@@ -1,0 +1,49 @@
+# 🏆 Level Up Challenge: Automated Cost & Credit Verifier
+
+Finished your core lab early? Time to build a local validation tool. 
+
+In this challenge, you will write a script to audit your own AI resource usage. You will parse your exported GitHub Copilot Desktop transcripts to verify your manual logs and track your remaining classroom AI credits.
+
+---
+
+## 📅 Objective
+Build a Python script named `validate_costs.py` at the root of your repository. The script must scan your exported chat transcripts, calculate your actual message usage, and flag discrepancies against both your manual log and your starting AI credit balance.
+
+### Step 1: Export Your Data
+1. Open your **GitHub Copilot Desktop App**.
+2. Click the **Export Chat** or **Share** function at the end of your session.
+3. Save the resulting file into a new folder: `.github/copilot-transcripts/`
+
+### Step 2: Write the Verification Script
+Your `validate_costs.py` script must execute the following requirements:
+
+1. **Scan the Directory:** Automatically read all files inside `.github/copilot-transcripts/`.
+2. **Count the Messages:** Parse the files (JSON or Markdown) and count the total number of prompts sent by the user.
+3. **Calculate AI Credit Consumption:** Apply a classroom standard flat rate of **10 Credits per user prompt** to calculate total credits used.
+4. **Audit and Deduct:** Open your root `ai-cost-log.md` to grab your starting credit balance (e.g., 5,000 credits). Calculate your current remaining credits and verify it matches your manual log.
+
+### Step 3: Acceptance Criteria (GIVEN, WHEN, THEN)
+
+* **Scenario: Credit Log Match Success**
+  * **GIVEN:** The student has a starting balance of 5,000 credits and 2 transcripts totaling 15 prompts.
+  * **WHEN:** The student runs `python validate_costs.py`.
+  * **THEN:** The terminal outputs a success message confirming that the calculated credit burn (150 credits) matches `ai-cost-log.md` and displays a remaining balance of 4,850 credits.
+
+* **Scenario: Credit Audit Mismatch Warning**
+  * **GIVEN:** The script detects 20 prompts (200 credits used), but `ai-cost-log.md` shows only 100 credits used.
+  * **WHEN:** The student runs `python validate_costs.py`.
+  * **THEN:** The script flags a warning showing a 100-credit discrepancy and directs the student to update their manual log.
+
+---
+
+## Example Output
+```text
+\$ python validate_costs.py
+[INFO] Scanning .github/copilot-transcripts/... Found 2 sessions.
+[INFO] Total User Prompts Analyzed: 15
+[INFO] Calculated AI Credit Burn (10 Credits/prompt): 150 Credits
+[INFO] Reading manual log: ai-cost-log.md... Found logged usage: 150 Credits
+
+✅ SUCCESS: Your manual log perfectly matches your exported session history!
+📊 Current Classroom Balance: 4,850 / 5,000 Credits remaining.
+```
