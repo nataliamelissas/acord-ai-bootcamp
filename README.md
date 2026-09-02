@@ -29,3 +29,31 @@ Access that link here: [GitHub Copilot Pro Plans](https://github.com/features/co
 
 #### 4. Lastly, get Visual Studio Code 
 Install it from [here](https://code.visualstudio.com) and follow the on-screen instructions. Once it's installed, open up the local folder on your computer containing the new repository.
+
+## 🤖 Getting Started With AI-Assisted Development Setup
+
+This repository uses **Spec-Driven Development**. Before writing code, you and your AI assistant must review the configuration files at the root and in the `.github/` folder.
+
+### Repository Architecture
+```text
+├── .github/
+│   └── copilot-instructions.md  # Redirects GitHub Copilot to your project rules
+├── AGENTS.md                    # Tailors AI agent behavior and PLAN mode workflow
+├── requirements.md              # Contains project specs and GIVEN/WHEN/THEN criteria
+└── README.md                    # This file
+```
+
+### File Breakdown
+
+#### 📋 requirements.md (Root)
+* **What it does:** Defines the exact features, constraints, and project milestones.
+* **Why it's at the root:** It acts as the primary blueprint. AI coding agents scan the root first to ensure code generation matches your project specs before editing files.
+
+#### 🤖 AGENTS.md (Root)
+* **What it does:** Outlines developer rules, terminal commands, and forces tools into **PLAN mode** before they write code.
+* **Why it's at the root:** Universal open-standard location for autonomous agents (like Claude Code) to discover your project rules automatically.
+
+#### 🚀 .github/copilot-instructions.md
+* **What it does:** Explicitly forces GitHub Copilot to use your root `AGENTS.md` and `requirements.md` files as its source of truth.
+* **Why it's here:** Copilot does not naturally read root agent files by default. This file bridges that gap so Copilot Chat and inline completions respect your rules.
+
