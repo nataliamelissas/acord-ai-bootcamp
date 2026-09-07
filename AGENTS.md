@@ -4,20 +4,19 @@
 > Replace this section with your project or repository purpose.
 This file provides a TEMPLATE of an AGENTS.md. Replace the 3 steps below with your own technical requirements. 
 An AGENTS.md file acts as a centralized configuration and context layer placed at the root of a repository.  
-It outlines exacy build steps, test instructions, coding conventions, and constraints that an AI agent cannot automatically infer from code alone.
-You can think of this file as a "letter" with technical instructions for your AI agent.
+It outlines exact build steps, test instructions, coding conventions, and constraints that an AI agent cannot automatically infer from code alone.
+Think of this file as a "letter" to your AI Agent with technical instructions.
 ---
 
 ## 1. Core Workflow (Spec-Driven Development)
-> Replace this core workflow with your own (although this is a good starter point)
 * **Plan First:** You must always use **PLAN mode** (or design thinking) before making edits.
-* **Review Specs:** Read `requirements.md` to understand objectives before touching code.
+* **Review Specs:** Read `requirements.md` to understand objectives before touching code if it exists.
 * **Propose Changes:** Present file-modification plans to the student for confirmation first.
 
 ## 2. Technical Environment & Commands
 > Replace these technical requirements with your own (although this is a good starter point)
 * **Language/Stack:** Python 3.11+
-* **Build Command:** `pip install -r requirements.txt`
+* **Build Commands:** `pip install -r requirements.txt`
 * **Test Command:** `pytest`
 
 ## 3. Style and Quality Constraints
