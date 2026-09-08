@@ -18,11 +18,9 @@ brew install node
 brew install --cask visual-studio-code
 brew install --cask github-copilot
 ```
-2. Prompt Copilot to download and install the software "Git" for you (Git is used for saving and publishing your code).
-3. Restart the Copilot Desktop app after it installs Git.
-4. Prompt Copilot to create a new code repository for you - name it what you want your project to be called.
-5. Copy the AGENTS.md file in this repository.
-6. Paste it into Copilot and ask it to help you create your own version of the AGENTS.md file using that template. 
+2. Prompt Copilot to create a new code repository for you - name it what you want your project to be called.
+3. Copy the AGENTS.md file in this repository.
+4. Paste it into Copilot and ask it to help you create your own version of the AGENTS.md file using that template. 
 
 ### If the Mac or Windows commands above do not work for you, ask a teacher for help or follow the manual installation instructions below:
 
