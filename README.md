@@ -2,23 +2,29 @@
 
 ## Start Here
 
-### Windows Computer Setup
-Paste this into a Terminal window if you have a Windows laptop:
+### Computer Setup
+1. Paste this into a Terminal window if you have a Windows laptop:
 ```
 winget install --id Git.Git --silent --accept-source-agreements --accept-package-agreements
 winget install --id OpenJS.NodeJS.LTS --silent --accept-source-agreements --accept-package-agreements
+winget install --id Microsoft.VisualStudioCode --silent --accept-source-agreements --accept-package-agreements
 winget install --id GitHub.CopilotApp --silent --accept-source-agreements --accept-package-agreements
 ```
 
-### Mac Computer Setup
-Paste this into a Terminal window if you have a Mac laptop:
+Or paste this into a Terminal window if you have a Mac laptop:
 ```
 brew install git
 brew install node
+brew install --cask visual-studio-code
 brew install --cask github-copilot
 ```
+2. Prompt Copilot to download and install the software "Git" for you (Git is used for saving and publishing your code).
+3. Restart the Copilot Desktop app after it installs Git.
+4. Prompt Copilot to create a new code repository for you - name it what you want your project to be called.
+5. Copy the AGENTS.md file in this repository.
+6. Paste it into Copilot and ask it to help you create your own version of the AGENTS.md file using that template. 
 
-### If the above does not work for you, ask a teacher for help or follow the manual instructions below: 
+### If the Mac or Windows commands above do not work for you, ask a teacher for help or follow the manual installation instructions below:
 
 #### 1. Setup via Terminal (Command Line)
 Follow the official steps on the [GitHub Git Setup Guide](https://docs.github.com/en/get-started/git-basics/set-up-git#setting-up-git) to download Git and authenticate. 
@@ -43,12 +49,12 @@ This app acts as a central control center for AI agents to run builds, test code
 #### 4. Subscribe to GitHub Copilot Pro 
 Access that link here: [GitHub Copilot Pro Plans](https://github.com/features/copilot/plans)
 
-#### 4. Lastly, get Visual Studio Code 
+#### 4. Lastly, get Visual Studio Code
 Install it from [here](https://code.visualstudio.com) and follow the on-screen instructions. Once it's installed, open up the local folder on your computer containing the new repository.
 
 ## 🤖 Getting Started With AI-Assisted Development Setup
 
-This repository uses **Spec-Driven Development**. Before writing code, you and your AI assistant must review the configuration files at the root and in the `.github/` folder.
+This repository uses **Spec-Driven Development**. Before writing code, you and your AI assistant must review the configuration files at the "root" folder.
 
 ### Repository Architecture
 ```text
@@ -61,13 +67,16 @@ This repository uses **Spec-Driven Development**. Before writing code, you and y
 
 ### File Breakdown
 
-#### 📋 requirements.md (Root)
-* **What it does:** Defines the exact features, constraints, and project milestones.
-* **Why it's at the root:** It acts as the primary blueprint. AI coding agents scan the root first to ensure code generation matches your project specs before editing files.
+#### README.md (Root)
+* Contains general human instructions on how to get started.
 
 #### 🤖 AGENTS.md (Root)
 * **What it does:** Outlines developer rules, terminal commands, and forces tools into **PLAN mode** before they write code.
 * **Why it's at the root:** Universal open-standard location for autonomous agents (like Claude Code) to discover your project rules automatically.
+  
+#### 📋 requirements.md (Root)
+* **What it does:** Defines the exact features, constraints, and project milestones.
+* **Why it's at the root:** It acts as the primary blueprint. AI coding agents scan the root first to ensure code generation matches your project specs before editing files.
 
 #### 🚀 .github/copilot-instructions.md
 * **What it does:** Explicitly forces GitHub Copilot to use your root `AGENTS.md` and `requirements.md` files as its source of truth.
