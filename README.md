@@ -2,7 +2,23 @@
 
 ## Start Here
 
-If you are setting up Git for the first time, please authenticate your machine and configure your identity so GitHub recognizes it. 
+### Windows Computer Setup
+Paste this into a Terminal window if you have a Windows laptop:
+```
+winget install --id Git.Git --silent --accept-source-agreements --accept-package-agreements
+winget install --id OpenJS.NodeJS.LTS --silent --accept-source-agreements --accept-package-agreements
+winget install --id GitHub.CopilotApp --silent --accept-source-agreements --accept-package-agreements
+```
+
+### Mac Computer Setup
+Paste this into a Terminal window if you have a Mac laptop:
+```
+brew install git
+brew install node
+brew install --cask github-copilot
+```
+
+### If the above does not work for you, ask a teacher for help or follow the manual instructions below: 
 
 #### 1. Setup via Terminal (Command Line)
 Follow the official steps on the [GitHub Git Setup Guide](https://docs.github.com/en/get-started/git-basics/set-up-git#setting-up-git) to download Git and authenticate. 
