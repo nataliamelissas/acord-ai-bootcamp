@@ -30,7 +30,7 @@ Follow the official steps on the [GitHub Git Setup Guide](https://docs.github.co
 #### 2. Next, clone this repo
 Pre-req: Git should be installed on your machine.
 
-1. **Open up a terminal on you laptop.**
+1. **Open up a terminal on your laptop.**
 1. **Clone this repository locally:** `git clone <ORIGINAL_REPO_URL>`
 2. **Navigate to that folder on your computer:** `cd <PATH_TO_CLONED_REPO>`
 3. **Create new repo:** Go to GitHub and create a new, empty repository (do not add a README or license).
