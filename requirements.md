@@ -1,5 +1,7 @@
 # requirements.md
 
+Google Doc: https://docs.google.com/document/d/1T2sOA2jo8p8tTzMVrwYgZPRS-HXWQS8WsxpLgerDxCg/edit?usp=sharing
+
 ## Purpose
 This document defines the system-level specifications, features, boundary conditions, and acceptance criteria for the teacher portfolio project. It outlines exactly what the final product must achieve, anchoring the developer and AI agents to concrete milestones before code implementation begins.
 
