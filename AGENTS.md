@@ -9,18 +9,17 @@ Think of this file as a "letter" to your AI Agent with technical instructions.
 ---
 
 ## 1. Core Workflow (Spec-Driven Development)
-* **Plan First:** You must always use **PLAN mode** (or design thinking) before making edits.
-* **Review Specs:** Read `requirements.md` to understand objectives before touching code if it exists.
-* **Propose Changes:** Present file-modification plans to the student for confirmation first.
+* **Plan First:** Always use PLAN mode or design thinking before generating or editing code.
+* **Review Specs:** Read local documentation or requirements.md to understand goals before touching code.
+* **Propose Changes:** Present file-modification plans to the user for confirmation before writing code.
+* **Data Grounding:** Use only the biographical data provided below. Never generate "Lorem Ipsum" or fake teaching history.
 
 ## 2. Technical Environment & Commands
-> Replace these technical requirements with your own (although this is a good starter point)
-* **Language/Stack:** Python 3.11+
-* **Build Commands:** `pip install -r requirements.txt`
-* **Test Command:** `pytest`
+* **Language/Stack:** Plain HTML5, CSS3, and vanilla JavaScript (Static site).
+* **Build Commands:** No build step required. Open index.html directly in a browser or use a simple local live server.
+* **Design Aesthetic:** Clean, responsive layout using warm academic colors (navy, cream, teal) with high contrast for accessibility.
 
 ## 3. Style and Quality Constraints
-> Replace these technical requirements with your own (although this is a good starter point)
-* Keep files modular and functions under 20 lines.
-* Write docstrings for all public methods.
-* Run tests automatically after any architectural file change.
+* **Framework Constraint:** Keep code modular, lightweight, and semantic without using external frameworks like React, Tailwind, or Bootstrap.
+* **Project Structure:** Organize project structure into simple, clear files (e.g., index.html, style.css, script.js).
+* **Resume Source Data:** Name: [Your Name] | Role: Teacher | Focus: [e.g., Elementary STEM] | Philosophy: [e.g., Student-centered growth] | Experience: [Job Title, School, Years].
