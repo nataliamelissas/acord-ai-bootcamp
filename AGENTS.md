@@ -24,11 +24,3 @@ Think of this file as a "letter" to your AI Agent with technical instructions.
 * Keep files modular and functions under 20 lines.
 * Write docstrings for all public methods.
 * Run tests automatically after any architectural file change.
-
----
-
-## Additional Example: Calculator API Implementation
-> These are additional types of instructions you could detail in this file.
-* **Agent Behavior:** The agent must inspect `requirements.md` and use plan mode to outline the Calculator's folder structure.
-* **Agent Build Action:** Run `pytest` to verify the local testing suite passes before modifying code.
-* **Agent Refactoring Rule:** Ensure error handling (like division-by-zero checks) is isolated into unique custom exception helpers.
