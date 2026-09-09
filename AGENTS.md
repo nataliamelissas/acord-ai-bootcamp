@@ -1,5 +1,7 @@
 # AGENTS.md
 
+Google doc: https://docs.google.com/document/d/10KiwEcUVSdS7Jdtmr_jV0spZSziPEHv0am-KbzpNXd4/edit?usp=sharing
+
 ## Purpose
 > Replace this section with your project or repository purpose.
 This file provides a TEMPLATE of an AGENTS.md. Replace the 3 steps below with your own technical requirements. 
